@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEV3 AI Translator &amp; Cultural Localizer — Documentation</title>
+<style>
+	:root { --ink:#111827; --muted:#4b5563; --line:#e5e7eb; --brand:#4f46e5; --soft:#eef2ff; --bg:#ffffff; --code:#f3f4f6; --warn:#fffbeb; --warnline:#f59e0b; }
+	@media (prefers-color-scheme: dark) { :root { --ink:#e5e7eb; --muted:#9ca3af; --line:#374151; --brand:#a5b4fc; --soft:#1e1b4b; --bg:#0b1020; --code:#1f2937; --warn:#2a2310; --warnline:#b45309; } }
+	* { box-sizing: border-box; }
+	body { margin:0; font:16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:var(--bg); }
+	.layout { display:grid; grid-template-columns:250px 1fr; max-width:1200px; margin:0 auto; }
+	nav { position:sticky; top:0; height:100vh; overflow:auto; padding:32px 20px; border-right:1px solid var(--line); font-size:14px; }
+	nav a { display:block; color:var(--muted); text-decoration:none; padding:4px 0; }
+	nav a:hover { color:var(--brand); }
+	nav strong { display:block; margin:16px 0 4px; font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink); }
+	main { padding:40px 48px 80px; min-width:0; }
+	h1 { font-size:32px; margin:0 0 6px; } h2 { font-size:22px; margin:48px 0 10px; padding-top:8px; border-top:1px solid var(--line); } h3 { font-size:17px; margin:24px 0 6px; }
+	p, li { color:var(--ink); } .lead { color:var(--muted); font-size:18px; }
+	code, kbd { background:var(--code); padding:1px 6px; border-radius:4px; font-size:.9em; }
+	pre { background:var(--code); padding:14px 16px; border-radius:8px; overflow:auto; font-size:13px; }
+	.tip { background:var(--soft); border-left:4px solid var(--brand); padding:12px 16px; border-radius:6px; margin:16px 0; }
+	.warn { background:var(--warn); border-left:4px solid var(--warnline); padding:12px 16px; border-radius:6px; margin:16px 0; }
+	table { border-collapse:collapse; width:100%; font-size:14px; margin:8px 0 16px; } th, td { text-align:left; border-bottom:1px solid var(--line); padding:8px 10px; vertical-align:top; }
+	.steps li { margin-bottom:6px; }
+	.flow { display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin:12px 0; font-size:14px; }
+	.flow span { background:var(--soft); border-radius:6px; padding:4px 10px; } .flow b { color:var(--muted); font-weight:400; }
+	@media (max-width: 820px) { .layout { grid-template-columns:1fr; } nav { position:static; height:auto; border-right:0; border-bottom:1px solid var(--line); } main { padding:24px 16px 60px; } }
+</style>
+</head>
+<body>
+<div class="layout">
+<nav aria-label="Contents">
+	<strong>Getting started</strong>
+	<a href="#overview">Overview</a>
+	<a href="#requirements">Requirements</a>
+	<a href="#install">Installation</a>
+	<a href="#api-key">API key setup</a>
+	<a href="#quick-start">Quick start</a>
+	<strong>Multilingual plugins</strong>
+	<a href="#polylang">Polylang</a>
+	<a href="#wpml">WPML</a>
+	<a href="#translatepress">TranslatePress</a>
+	<strong>Using the plugin</strong>
+	<a href="#dashboard">Dashboard</a>
+	<a href="#bulk">Bulk translation &amp; queue</a>
+	<a href="#delta">Translation memory &amp; delta sync</a>
+	<a href="#review">Review</a>
+	<a href="#glossary">Glossary &amp; brand terms</a>
+	<a href="#locales">Cultural adaptation (Locales)</a>
+	<a href="#content">What gets translated</a>
+	<a href="#editor">Edit screen box</a>
+	<strong>Reference</strong>
+	<a href="#settings">Settings</a>
+	<a href="#engine">Translation engine</a>
+	<a href="#updates">Updates</a>
+	<a href="#troubleshooting">Troubleshooting</a>
+	<a href="#developers">Developers</a>
+	<a href="#privacy">Privacy</a>
+	<a href="#changelog">Changelog</a>
+</nav>
+<main>
+<h1>DEV3 AI Translator &amp; Cultural Localizer</h1>
+<p class="lead">AI translation with cultural adaptation, glossary, translation memory and delta sync for WPML, TranslatePress and Polylang. Version 1.0.0 · by DEV3 Technologies.</p>
+
+<h2 id="overview">Overview</h2>
+<p>The plugin translates posts, pages, WooCommerce products and custom post types into the languages you configured in your multilingual plugin — and adapts them for each market instead of translating word for word: formal or informal address, metric or imperial units, currency, date and number formats, idioms and brand voice.</p>
+<div class="flow"><span>Source post</span><b>→</b><span>Segments (blocks, paragraphs, alt text, SEO…)</span><b>→</b><span>Translation memory</span><b>→</b><span>AI (only new / changed)</span><b>→</b><span>Glossary check</span><b>→</b><span>Translation saved through WPML / Polylang / TranslatePress</span></div>
+<ul>
+	<li><strong>Block-aware:</strong> content is split into paragraphs, headings, list items, buttons, image alt texts and captions; markup, links, shortcodes and block settings are never shown to the AI and are rebuilt exactly.</li>
+	<li><strong>Translation memory &amp; delta sync:</strong> when you edit a source post, only the paragraphs you changed are sent to the AI. Everything else is reused — you see “X of Y segments reused” on every sync.</li>
+	<li><strong>Glossary:</strong> brand names and product names stay untranslated; mandatory translations are enforced per language. Every answer is checked and corrected automatically.</li>
+	<li><strong>Review:</strong> side-by-side editor for every segment. Human edits are protected from being overwritten by later syncs.</li>
+	<li><strong>Bulk:</strong> translate whole post types into several languages in a background queue with progress, pause/resume/cancel, a cost estimate and a per-item log.</li>
+</ul>
+
+<h2 id="requirements">Requirements</h2>
+<ul>
+	<li>WordPress 6.0+, PHP 7.4–8.3 with the OpenSSL extension, outbound HTTPS to <code>generativelanguage.googleapis.com</code>.</li>
+	<li>One multilingual plugin: <strong>Polylang</strong> (free or Pro), <strong>WPML</strong> (Multilingual CMS; String Translation for site strings), or <strong>TranslatePress</strong> (free or paid). Activate only one of them.</li>
+	<li>A Google Gemini API key (free tier available).</li>
+	<li>Optional: WooCommerce 7+ (products, attributes, variations), Yoast SEO or Rank Math (SEO fields).</li>
+</ul>
+
+<h2 id="install">Installation</h2>
+<ol class="steps">
+	<li>In your Envato download, find <code>dev3-ai-translator-localizer.zip</code> (the installable plugin — do not upload the whole bundle).</li>
+	<li>WordPress admin → <em>Plugins → Add New → Upload Plugin</em> → choose the zip → <em>Install Now</em> → <em>Activate</em>.</li>
+	<li>A new <strong>DEV3 AI Translator</strong> menu appears in the admin sidebar.</li>
+</ol>
+
+<h2 id="api-key">API key setup</h2>
+<ol class="steps">
+	<li>Open <a href="https://aistudio.google.com/app/apikey">Google AI Studio → API keys</a> and click <em>Create API key</em>.</li>
+	<li>Go to <em>DEV3 AI Translator → API Config</em>, paste the key and click <strong>Validate &amp; save</strong>. You should see “Connected — N models available”.</li>
+</ol>
+<div class="tip">The key is encrypted in your database (AES-256-GCM) and never sent to the browser. You can also define it in <code>wp-config.php</code>:<pre>define( 'DEV3TL_GEMINI_API_KEY', 'AIza...' );</pre></div>
+<p>For regular bulk work enable billing on the Google Cloud project behind the key; the free tier has low per-minute limits.</p>
+
+<h2 id="quick-start">Quick start</h2>
+<ol class="steps">
+	<li>Make sure your multilingual plugin has at least two languages (e.g. English + German). The <em>Dashboard</em> shows the detected plugin and languages.</li>
+	<li>Optional: add brand names to <em>Glossary</em> (e.g. “CloudDesk Pro”, <em>Do not translate</em>).</li>
+	<li>Optional: check <em>Locales</em> — formality, units, currency and formats per language have sensible defaults.</li>
+	<li>Open <em>Bulk Translate</em>, pick post types and languages, click <strong>Estimate cost</strong>, then <strong>Start translation</strong>.</li>
+	<li>Open <em>Review</em> to read and polish the result. From now on, editing a source post syncs only what changed.</li>
+</ol>
+
+<h2 id="polylang">Polylang</h2>
+<p>Each translation is a separate post linked to the source through Polylang's translation group (<code>pll_set_post_language</code>, <code>pll_save_post_translations</code>). Categories, tags and product categories are translated and linked the same way (<code>pll_save_term_translations</code>); existing term translations are reused.</p>
+<ul>
+	<li>Enable the post types and taxonomies you want to translate in <em>Languages → Settings → Custom post types and Taxonomies</em> (e.g. Products, Product categories). Types that are not enabled appear greyed out in Bulk Translate.</li>
+	<li>WooCommerce with Polylang free: the plugin creates the translated product, copies prices and settings, translates local attributes and variation descriptions and creates matching variations. Stock is not shared between languages (that needs Polylang for WooCommerce).</li>
+	<li>“Translate site title &amp; tagline” on the Dashboard writes Polylang string translations (<em>Languages → Translations</em>).</li>
+</ul>
+
+<h2 id="wpml">WPML</h2>
+<p>The adapter uses WPML's public hooks only: <code>wpml_active_languages</code>, <code>wpml_default_language</code>, <code>wpml_post_language_details</code>, <code>wpml_object_id</code>, <code>wpml_element_trid</code> and <code>wpml_set_element_language_details</code>. A translation is a normal post added to the source's translation group (trid); terms are linked by <code>term_taxonomy_id</code>. Site strings go through WPML String Translation (<code>wpml_register_single_string</code>, <code>icl_add_string_translation</code>) when that module is active.</p>
+<div class="warn">WPML's own Translation Management can mark posts that were edited outside its editor as “needs update”. That is expected: our translations are written as regular posts. Use <em>Review</em> (not WPML's Advanced Translation Editor) to edit AI translations so your edits are protected from later syncs.</div>
+
+<h2 id="translatepress">TranslatePress</h2>
+<p>TranslatePress does not create translation posts: it translates the page as it is rendered, using a dictionary of strings. The plugin therefore works in <strong>string mode</strong>:</p>
+<ol>
+	<li>The post is rendered the way the front end shows it (title, content, excerpt).</li>
+	<li>TranslatePress' own parser lists the strings exactly as it will look them up. Paragraphs that contain links or bold text are registered as TranslatePress <em>translation blocks</em>, so a sentence with a link is translated as one sentence.</li>
+	<li>Translations are written into TranslatePress' dictionary with its own query class (status “machine translated”, or “human reviewed” for segments you edited in Review). Strings a translator reviewed in TranslatePress' visual editor are never overwritten.</li>
+</ol>
+<p>Visit the page in the translated language (e.g. <code>/de/about/</code>) to see it. TranslatePress free supports one extra language; TranslatePress' own automatic translation does not need to be enabled.</p>
+<div class="warn">Polylang and TranslatePress cannot be active at the same time (they both control language URLs). Activate one multilingual plugin. You can force a specific one under <em>Settings → Multilingual plugin</em> if several are installed.</div>
+
+<h2 id="dashboard">Dashboard</h2>
+<p>Shows which multilingual plugin is in use, its languages with their cultural profile, translation-memory statistics (segments, human-reviewed, needing review, reuse rate, tokens), recently translated items and the queue.</p>
+
+<h2 id="bulk">Bulk translation &amp; queue</h2>
+<ul>
+	<li><strong>Content</strong> — posts, pages, products and any custom post type your multilingual plugin translates. Counts show source-language items.</li>
+	<li><strong>Only items without a translation</strong> — skip items that already have a translation in that language.</li>
+	<li><strong>Re-translate AI segments</strong> — ignore AI entries in the memory (human-edited and approved segments are always kept).</li>
+	<li><strong>Estimate cost</strong> — counts segments and characters, checks how many are already in the translation memory and estimates tokens and cost for the selected model (public list prices; your real bill is in Google AI Studio).</li>
+	<li><strong>Jobs</strong> — progress bar, items done / failed / skipped, segments reused, tokens; <em>Pause</em>, <em>Resume</em>, <em>Cancel</em>, and a per-item log with links to Review.</li>
+</ul>
+<p>Jobs run in the background with <strong>Action Scheduler</strong> (bundled with WooCommerce) or <strong>WP-Cron</strong>. While the Bulk screen is open it also processes the queue itself, so jobs complete even on hosts where background loopback requests are blocked.</p>
+
+<h2 id="delta">Translation memory &amp; delta sync</h2>
+<p>Every segment is stored in the table <code>{prefix}dev3tl_tm</code> keyed by the SHA-1 of its normalised source text plus the source and target locale. On each sync:</p>
+<ol>
+	<li>The source is segmented again.</li>
+	<li>Segments whose text is unchanged are taken from the memory (no AI call).</li>
+	<li>Only new or edited segments are sent to the AI, in batches.</li>
+	<li>The translation post is updated <em>in place</em> (same post, same URL).</li>
+</ol>
+<p>With <strong>Auto-sync on update</strong> (Settings) saving a translated source post queues this delta sync automatically. The edit screen box and Review show “X of Y segments reused”. Identical sentences in different posts are translated once.</p>
+<p><strong>Manual edits:</strong> if someone edits a translation post directly, syncs skip it (option <em>Protect manual edits</em>) instead of overwriting their work. Use Review to make edits that survive syncs.</p>
+
+<h2 id="review">Review</h2>
+<p>Lists translated items with their languages. Open one to see the source and the translation side by side, segment by segment.</p>
+<ul>
+	<li>Edit any translation and click <strong>Save &amp; update translation</strong>. The segment becomes <em>Human-edited</em>: future syncs (even “Re-translate”) never replace it, and the translation post is rebuilt from the memory immediately — no AI call.</li>
+	<li><strong>Approve</strong> marks an AI segment as reviewed (also protected). <em>Approve all shown</em> approves the filtered list.</li>
+	<li>Markup placeholders like <code>&lt;1&gt;…&lt;/1&gt;</code> stand for links or bold text and <code>&lt;2/&gt;</code> for a line break or shortcode. Keep them in your translation (you may move them); the editor warns you if one is missing.</li>
+	<li>Filter by <em>Needs review</em> to see segments that failed a glossary or markup check.</li>
+	<li><strong>Sync now</strong> runs a delta sync for this item and language.</li>
+</ul>
+
+<h2 id="glossary">Glossary &amp; brand terms</h2>
+<table>
+	<tr><th>Field</th><th>Meaning</th></tr>
+	<tr><td>Term</td><td>Word or phrase in the source language (matched as a whole word).</td></tr>
+	<tr><td>Do not translate</td><td>Keep exactly as written: brand and product names, technical keywords.</td></tr>
+	<tr><td>Case-sensitive</td><td>Only match (and require) this exact capitalisation.</td></tr>
+	<tr><td>Forced (locale)</td><td>Mandatory translation for that language, e.g. checkout → Kasse.</td></tr>
+	<tr><td>Notes</td><td>For your team.</td></tr>
+</table>
+<p>Relevant terms are added to the AI instructions; every answer is then checked. If a protected term was translated or a forced translation is missing, that segment is retried once with an explicit correction. If it still fails it is saved and flagged <em>Needs review</em>. Use <em>Import CSV</em> / <em>Export CSV</em> (columns <code>term, dnt, case_sensitive, notes, de_DE, fr_FR…</code>) to manage large glossaries.</p>
+
+<h2 id="locales">Cultural adaptation (Locales)</h2>
+<table>
+	<tr><th>Option</th><th>Effect</th></tr>
+	<tr><td>Formality</td><td>Formal or informal address with the right pronoun per language (Sie/du, vous/tu, usted/tú, Lei/tu, u/je…), or follow the source.</td></tr>
+	<tr><td>Measurement units</td><td>Metric, imperial/US or keep. Measurements are detected (inches, feet, miles, pounds, ounces, gallons, °F, mph… and metric units) and the exact converted values are pre-calculated and given to the AI, which rounds them naturally. Optionally keep the original in parentheses.</td></tr>
+	<tr><td>Currency mentions</td><td>Keep as written, keep but localise the format (symbol position, spacing), or convert with a fixed rate you enter.</td></tr>
+	<tr><td>Date format, separators</td><td>Full dates and numbers are rewritten in the locale's format (e.g. 14.03.2026, 1.234,56).</td></tr>
+	<tr><td>Adapt idioms</td><td>Replace idioms, puns and cultural references with natural local equivalents (“a piece of cake” → “kinderleicht”), or translate faithfully.</td></tr>
+	<tr><td>Brand voice / Custom instructions</td><td>Free text added to every request for this language.</td></tr>
+</table>
+<p>Defaults are chosen from the locale (e.g. de_DE: formal, metric, EUR, DD.MM.YYYY; en_US: imperial).</p>
+
+<h2 id="content">What gets translated</h2>
+<ul>
+	<li><strong>Block editor:</strong> paragraphs, headings, list items, quotes, buttons, image alt text and captions, table cells, and text attributes of blocks (labels, placeholders, button text, captions…). Block settings, classes and IDs are preserved.</li>
+	<li><strong>Classic editor and HTML:</strong> text split into paragraphs; inline formatting kept; <code>alt</code>, <code>title</code>, <code>placeholder</code>, <code>aria-label</code> and button values translated.</li>
+	<li><strong>Never translated:</strong> URLs, shortcodes and their attributes, code (<code>&lt;code&gt;</code>, <code>&lt;pre&gt;</code>), scripts, styles, SVG, and anything inside an element with <code>translate="no"</code> or the class <code>notranslate</code>.</li>
+	<li><strong>Title, excerpt and slug</strong> (the slug is generated from the translated title).</li>
+	<li><strong>SEO:</strong> Yoast SEO and Rank Math titles, descriptions, focus keywords and social titles/descriptions (variables like <code>%%title%%</code> are kept).</li>
+	<li><strong>WooCommerce:</strong> short description, custom attributes (names and values), variation descriptions; translated categories and tags.</li>
+	<li><strong>Custom fields:</strong> list text meta keys under <em>Settings → Custom fields to translate</em>.</li>
+	<li><strong>Taxonomy terms</strong> without a translation in the target language are translated and linked.</li>
+</ul>
+
+<h2 id="editor">Edit screen box</h2>
+<p>On translatable source posts an <em>DEV3 AI Translation</em> box lists each language with its status (“5 of 6 segments reused”) and a <em>Translate</em> / <em>Sync</em> button. On translation posts it links to the review screen.</p>
+
+<h2 id="settings">Settings</h2>
+<table>
+	<tr><th>Setting</th><th>Default</th><th>Description</th></tr>
+	<tr><td>Multilingual plugin</td><td>Auto-detect</td><td>WPML → Polylang → TranslatePress, or force one.</td></tr>
+	<tr><td>Status of new translations</td><td>Same as source</td><td>Or Draft / Pending review / Published.</td></tr>
+	<tr><td>Auto-sync on update</td><td>On</td><td>Queue a delta sync when a translated source is saved.</td></tr>
+	<tr><td>Protect manual edits</td><td>On</td><td>Skip translations edited directly in WordPress.</td></tr>
+	<tr><td>Translate slugs</td><td>On</td><td>Generate translated slugs for new translations.</td></tr>
+	<tr><td>SEO fields / WooCommerce fields</td><td>On</td><td>Include Yoast/Rank Math and product data.</td></tr>
+	<tr><td>Copy other custom fields</td><td>On</td><td>Copy untranslated meta (prices, featured image…) to new translations (SKU is never copied).</td></tr>
+	<tr><td>Use Action Scheduler</td><td>On</td><td>Falls back to WP-Cron.</td></tr>
+	<tr><td>Custom fields to translate</td><td>—</td><td>Comma-separated meta keys.</td></tr>
+	<tr><td>Delete data on uninstall</td><td>Off</td><td>Removes tables, options and plugin post meta.</td></tr>
+</table>
+
+<h2 id="engine">Translation engine</h2>
+<p><em>API Config → Translation engine</em>: the model (default: the Pro model, <code>gemini-2.5-pro</code>, best for nuance; the Fast model is cheaper), thinking budget (1024), request timeout (150 s), segments per request (40) and characters per request (6000). Segments are sent as JSON with short stable ids and a response schema, so every answer maps back to its segment.</p>
+
+<h2 id="updates">Updates</h2>
+<p>No licence key or activation is needed: every feature works as soon as the plugin is active. To update, download the latest version from your Envato <em>Downloads</em> page, then go to <em>Plugins → Add New → Upload Plugin</em> and upload the zip. WordPress offers to replace the installed version and keeps all your settings and data.</p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+<table>
+	<tr><th>Symptom</th><th>Fix</th></tr>
+	<tr><td>“No supported multilingual plugin is active”</td><td>Activate WPML, Polylang or TranslatePress and add a second language.</td></tr>
+	<tr><td>A post type is greyed out in Bulk</td><td>Enable it for translation in your multilingual plugin's settings.</td></tr>
+	<tr><td>Jobs stay “Queued”</td><td>WP-Cron may be disabled. Keep the Bulk screen open (it processes the queue), or run a real cron (<code>wp cron event run --due-now</code>).</td></tr>
+	<tr><td>“Quota exhausted” / 429 errors</td><td>The key hit its rate limit; enable billing or lower <em>Segments per request</em>. Failed items are listed in the job log; start a new job with “Only items without a translation”.</td></tr>
+	<tr><td>A translation was “skipped”</td><td>Someone edited the translation post directly. Use <em>Sync now</em> in the edit-screen box to overwrite, or disable <em>Protect manual edits</em>.</td></tr>
+	<tr><td>Segments flagged “Needs review”</td><td>A glossary term or markup placeholder was wrong even after the retry. Fix it in Review.</td></tr>
+	<tr><td>TranslatePress page still in English</td><td>Clear page caches; make sure the language is published in TranslatePress settings and visit the language URL (e.g. <code>/de/…</code>).</td></tr>
+</table>
+
+<h2 id="developers">Developers</h2>
+<h3>Filters &amp; actions</h3>
+<table>
+	<tr><th>Hook</th><th>Purpose</th></tr>
+	<tr><td><code>dev3tl_providers</code></td><td>Add or replace provider adapters (extend <code>Providers\Base_Provider</code>).</td></tr>
+	<tr><td><code>dev3tl_block_attribute_keys</code></td><td>Block attribute keys translated (per block name).</td></tr>
+	<tr><td><code>dev3tl_translate_html_attribute</code></td><td>Whether an HTML attribute is translated.</td></tr>
+	<tr><td><code>dev3tl_translatable_meta</code></td><td>Meta keys translated for a post.</td></tr>
+	<tr><td><code>dev3tl_build_document</code> (action)</td><td>Add your own fields to a post's translation document.</td></tr>
+	<tr><td><code>dev3tl_copy_meta_exclude</code></td><td>Meta keys never copied to new translations.</td></tr>
+	<tr><td><code>dev3tl_locale_profile</code></td><td>Modify a locale's cultural profile at runtime.</td></tr>
+	<tr><td><code>dev3tl_system_prompt</code></td><td>Modify the translation instructions.</td></tr>
+	<tr><td><code>dev3tl_model_prices</code></td><td>Prices used for cost estimates.</td></tr>
+	<tr><td><code>dev3tl_translatepress_post_html</code></td><td>HTML whose strings are translated in TranslatePress mode.</td></tr>
+	<tr><td><code>dev3tl_capability</code> / <code>dev3tl_manage_capability</code></td><td>Capabilities for translating (default <code>edit_posts</code>) and managing settings (<code>manage_options</code>).</td></tr>
+	<tr><td><code>dev3tl_request_body</code> / <code>dev3tl_request_timeout</code></td><td>Low-level AI request tweaks.</td></tr>
+</table>
+<h3>REST API</h3>
+<p>Namespace <code>dev3tl/v1</code>, cookie authentication with a <code>wp_rest</code> nonce. Main routes: <code>dashboard</code>, <code>estimate</code>, <code>jobs</code>, <code>jobs/create</code>, <code>jobs/{id}</code>, <code>jobs/{id}/pause|resume|cancel</code>, <code>glossary</code>, <code>locales</code>, <code>review/{post}/{lang}</code>, <code>translate</code>. Review and translate require permission to edit that post.</p>
+<h3>Programmatic sync</h3>
+<pre>$stats = \Dev3\AiTranslatorLocalizer\Sync\Sync_Engine::sync( $post_id, 'de' );
+// [ 'total' => 12, 'reused' => 11, 'sent' => 1, 'target_id' => 345, ... ]</pre>
+<h3>Data</h3>
+<p>Tables: <code>{prefix}dev3tl_tm</code> (translation memory), <code>{prefix}dev3tl_glossary</code>, <code>{prefix}dev3tl_jobs</code>, <code>{prefix}dev3tl_job_items</code>, <code>{prefix}dev3tl_usage</code>. Post meta: <code>_dev3tl_sync</code> on sources (per-language stats), <code>_dev3tl_source</code>, <code>_dev3tl_lang</code>, <code>_dev3tl_written</code> on translations.</p>
+
+<h2 id="privacy">Privacy</h2>
+<p>The text of the content you translate (titles, content, excerpts, selected custom fields, SEO fields, term names) and your glossary/locale instructions are sent to Google's Gemini API using your API key, only when a translation runs (manually, in a bulk job, or by auto-sync after you save a translated post). Personal data in your content is sent too, so make sure your privacy policy covers AI processing by Google. No visitor data is sent. The API key is encrypted in your database and never sent to the browser.tech. Usage logs (task, model, token counts) are stored locally and can be disabled.</p>
+
+<h2 id="changelog">Changelog</h2>
+<p><strong>1.0.0</strong> — Initial release.</p>
+</main>
+</div>
+</body>
+</html>

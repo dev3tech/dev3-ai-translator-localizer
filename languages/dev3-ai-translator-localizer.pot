@@ -1,0 +1,1638 @@
+# Copyright (C) 2026 DEV3 Technologies
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: DEV3 AI Translator & Cultural Localizer for WPML, TranslatePress & Polylang 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dev3-ai-translator-localizer\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-23T17:39:22+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: dev3-ai-translator-localizer\n"
+
+#. Plugin Name of the plugin
+#: dev3-ai-translator-localizer.php
+msgid "DEV3 AI Translator & Cultural Localizer for WPML, TranslatePress & Polylang"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: dev3-ai-translator-localizer.php
+msgid "https://dev3.tech/item/dev3-ai-translator-localizer"
+msgstr ""
+
+#. Description of the plugin
+#: dev3-ai-translator-localizer.php
+msgid "AI translation with cultural adaptation, glossary, translation memory and delta sync for WPML, TranslatePress and Polylang."
+msgstr ""
+
+#. Author of the plugin
+#: dev3-ai-translator-localizer.php
+msgid "DEV3 Technologies"
+msgstr ""
+
+#. Author URI of the plugin
+#: dev3-ai-translator-localizer.php
+msgid "https://dev3.tech"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:40
+msgid "DEV3 AI Translator"
+msgstr ""
+
+#: includes/Admin/Admin_Page.php:68
+#: build/admin.js:1
+msgid "Settings"
+msgstr ""
+
+#: includes/Admin/Post_Metabox.php:44
+#: includes/Admin/Post_Metabox.php:51
+msgid "DEV3 AI Translation"
+msgstr ""
+
+#. translators: %s: multilingual plugin name
+#: includes/Admin/Post_Metabox.php:65
+#, php-format
+msgid "Translates this item with DEV3 AI through %s. Save your changes first."
+msgstr ""
+
+#. translators: 1: reused, 2: total
+#: includes/Admin/Post_Metabox.php:88
+#: build/admin.js:1
+#, php-format,js-format
+msgid "%1$d of %2$d segments reused"
+msgstr ""
+
+#: includes/Admin/Post_Metabox.php:94
+#: build/admin.js:1
+msgid "Not translated yet"
+msgstr ""
+
+#: includes/Admin/Post_Metabox.php:96
+msgid "Sync"
+msgstr ""
+
+#: includes/Admin/Post_Metabox.php:96
+msgid "Translate"
+msgstr ""
+
+#: includes/Admin/Post_Metabox.php:100
+#: build/admin.js:1
+msgid "Review translations"
+msgstr ""
+
+#: includes/Admin/Post_Metabox.php:112
+msgid "This translation is kept in sync with its source by DEV3 AI Translator. Edit segments in the review screen so your changes are protected from future syncs."
+msgstr ""
+
+#: includes/Admin/Post_Metabox.php:113
+#: build/admin.js:1
+msgid "Open review"
+msgstr ""
+
+#: includes/Admin/Post_Metabox.php:124
+#: includes/Rest/Translator_Controller.php:81
+msgid "You do not have permission to translate this item."
+msgstr ""
+
+#. translators: 1: reused, 2: total, 3: sent to AI
+#: includes/Admin/Post_Metabox.php:152
+#, php-format
+msgid "Translation updated: %1$d of %2$d segments reused, %3$d sent to AI."
+msgstr ""
+
+#: includes/Content/Post_Document.php:57
+msgid "Title"
+msgstr ""
+
+#: includes/Content/Post_Document.php:58
+#: build/admin.js:1
+msgid "Content"
+msgstr ""
+
+#: includes/Content/Post_Document.php:60
+msgid "Short description"
+msgstr ""
+
+#: includes/Content/Post_Document.php:60
+msgid "Excerpt"
+msgstr ""
+
+#. translators: %s: custom field key
+#: includes/Content/Post_Document.php:114
+#, php-format
+msgid "Custom field %s"
+msgstr ""
+
+#: includes/Content/Post_Document.php:139
+msgid "Attribute name"
+msgstr ""
+
+#: includes/Content/Post_Document.php:142
+msgid "Attribute value"
+msgstr ""
+
+#: includes/Content/Post_Document.php:158
+msgid "Variation description"
+msgstr ""
+
+#: includes/Content/Post_Document.php:184
+#: build/admin.js:1
+msgid "Term"
+msgstr ""
+
+#: includes/Content/Post_Document.php:186
+msgid "Term description"
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:49
+msgid "No Gemini API key is configured."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:50
+msgid "Open the plugin settings → API Config and paste a key from Google AI Studio."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:66
+msgid "The AI service took too long to respond."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:67
+msgid "Try again, shorten the prompt, lower Max Output Tokens, or switch to the faster model."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:75
+msgid "Your server could not reach the AI service (Google Gemini API)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:76
+msgid "Check the server's internet connection or firewall (outbound HTTPS to generativelanguage.googleapis.com)."
+msgstr ""
+
+#. translators: %s: transport error message.
+#: includes/Core3/Api/Api_Error.php:84
+#, php-format
+msgid "Request to the AI service failed: %s"
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:85
+#: includes/Core3/Api/Gemini_Client.php:180
+msgid "Try again in a moment."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:114
+msgid "The Gemini API key is not valid."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:115
+msgid "Create a new key in Google AI Studio and paste it in API Config."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:123
+msgid "Your Gemini quota is exhausted."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:123
+msgid "AI rate limit reached."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:125
+msgid "Wait for the quota to reset, enable billing on your Google Cloud project, or switch to a model with remaining quota."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:126
+msgid "Wait a few seconds and try again."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:134
+msgid "This API key is not allowed to use Gemini."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:135
+msgid "Enable the Generative Language API for the key's project, and check any key restrictions (HTTP referrer / IP)."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:142
+msgid "The selected Gemini model is not available."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:143
+msgid "Pick another model in API Config — click \"Refresh models\" to load the ones your key can use."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:150
+msgid "The AI service is not available in your server's region."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:151
+msgid "Host the site in a supported region or use a key from a supported project."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:158
+msgid "The AI service is temporarily unavailable."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:159
+msgid "This is on Google's side. Try again shortly or switch models."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:166
+msgid "The AI service rejected the request."
+msgstr ""
+
+#: includes/Core3/Api/Api_Error.php:167
+msgid "Adjust the prompt or settings and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:179
+msgid "The AI returned malformed data."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:229
+msgid "The AI blocked this request for safety reasons."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:230
+#: includes/Core3/Api/Gemini_Client.php:259
+msgid "Rephrase the prompt and try again."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:258
+msgid "The AI stopped because the response was flagged."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:266
+msgid "The AI ran out of output tokens before writing an answer."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:267
+msgid "Increase Max Output Tokens in API Config, or set Reasoning to \"Low\"."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:274
+msgid "The AI returned an empty response."
+msgstr ""
+
+#: includes/Core3/Api/Gemini_Client.php:275
+msgid "Try again or rephrase the prompt."
+msgstr ""
+
+#: includes/Core3/Data/Usage_Repository.php:81
+msgid "Deleted user"
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:72
+msgid "Your session has expired. Reload the editor and try again."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:75
+msgid "You do not have permission to do that."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:94
+msgid "Cross-origin requests are not allowed."
+msgstr ""
+
+#: includes/Core3/Rest/Base_Controller.php:104
+msgid "Too many requests. Please wait a moment."
+msgstr ""
+
+#: includes/Data/Glossary.php:70
+msgid "Enter a term."
+msgstr ""
+
+#: includes/Data/Glossary.php:114
+msgid "Could not save the term."
+msgstr ""
+
+#. translators: 1: glossary term, 2: required translation
+#: includes/Data/Glossary.php:211
+#, php-format
+msgid "\"%1$s\" must be translated as \"%2$s\""
+msgstr ""
+
+#. translators: %s: glossary term
+#: includes/Data/Glossary.php:215
+#, php-format
+msgid "\"%s\" must stay untranslated"
+msgstr ""
+
+#: includes/Providers/TranslatePress_Provider.php:182
+msgid "TranslatePress stores translations as strings, not posts."
+msgstr ""
+
+#: includes/Providers/TranslatePress_Provider.php:219
+msgid "TranslatePress translates term names as strings."
+msgstr ""
+
+#: includes/Queue/Estimator.php:72
+#: includes/Queue/Queue.php:82
+#: includes/Rest/Translator_Controller.php:374
+#: includes/Sync/Review.php:91
+msgid "No supported multilingual plugin is active."
+msgstr ""
+
+#: includes/Queue/Queue.php:87
+msgid "Choose at least one target language."
+msgstr ""
+
+#: includes/Queue/Queue.php:104
+msgid "Nothing to translate: every selected item already has a translation."
+msgstr ""
+
+#: includes/Queue/Queue.php:233
+#: includes/Rest/Translator_Controller.php:242
+msgid "Job not found."
+msgstr ""
+
+#. translators: %d: segments
+#: includes/Queue/Queue.php:460
+#, php-format
+msgid "%d segment flagged for review."
+msgid_plural "%d segments flagged for review."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/Rest/Translator_Controller.php:293
+msgid "Paste a header row and at least one term."
+msgstr ""
+
+#: includes/Sync/Review.php:107
+msgid "Translation not found."
+msgstr ""
+
+#. translators: %s: placeholders such as <1></1>
+#: includes/Sync/Review.php:195
+#, php-format
+msgid "Keep exactly these markup placeholders: %s"
+msgstr ""
+
+#: includes/Sync/Sync_Engine.php:65
+msgid "No supported multilingual plugin (WPML, Polylang or TranslatePress) is active."
+msgstr ""
+
+#: includes/Sync/Sync_Engine.php:69
+msgid "This post cannot be translated (missing, or its post type is not translatable)."
+msgstr ""
+
+#: includes/Sync/Sync_Engine.php:72
+msgid "Unknown target language."
+msgstr ""
+
+#: includes/Sync/Sync_Engine.php:77
+msgid "The target language is the language of the source post."
+msgstr ""
+
+#: includes/Sync/Sync_Engine.php:90
+msgid "The translation was edited manually; it was not overwritten."
+msgstr ""
+
+#: includes/Sync/Sync_Engine.php:190
+msgid "Text"
+msgstr ""
+
+#: includes/Sync/Sync_Engine.php:191
+msgid "Paragraph with markup"
+msgstr ""
+
+#: includes/Sync/Sync_Engine.php:192
+msgid "Image alt text"
+msgstr ""
+
+#: includes/Sync/Sync_Engine.php:193
+msgid "Title attribute"
+msgstr ""
+
+#: includes/Sync/Sync_Engine.php:194
+msgid "Placeholder"
+msgstr ""
+
+#: includes/Sync/Sync_Engine.php:195
+#: includes/Sync/Sync_Engine.php:196
+msgid "Button"
+msgstr ""
+
+#: includes/Sync/Sync_Engine.php:197
+msgid "Meta description"
+msgstr ""
+
+#: includes/Translation/Translator.php:269
+msgid "missing translation"
+msgstr ""
+
+#. translators: %s: list of placeholders
+#: includes/Translation/Translator.php:276
+#, php-format
+msgid "placeholders must be exactly %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Request cancelled."
+msgstr ""
+
+#: build/admin.js:1
+msgid "You appear to be offline."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your internet connection, then try again."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Could not reach your WordPress site."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Check your connection or reload the editor."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Your session has expired."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save your work and reload the page."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Something went wrong."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom model ID…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Choose from list"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Google Gemini API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Create a free key in Google AI Studio, paste it here and click “Validate & save”. The key is encrypted in your database and never sent to the browser."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Get an API key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "The key is defined by the DEV3TL_GEMINI_API_KEY constant in wp-config.php."
+msgstr ""
+
+#: build/admin.js:1
+msgid "API key"
+msgstr ""
+
+#. translators: %d: number of models
+#: build/admin.js:1
+#, js-format
+msgid "Connected — %d models available to this key."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Validate & save"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Remove key"
+msgstr ""
+
+#: build/admin.js:1
+msgid "OpenSSL is not available on this server, so the key is only obfuscated. Consider defining DEV3TL_GEMINI_API_KEY in wp-config.php instead."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Models"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast is used for most editing tasks; Pro for complex, long-form or structured work."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Refresh models"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Fast model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-flash"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pro model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recommended: gemini-2.5-pro"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Generation parameters"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Temperature"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Lower = focused and consistent, higher = more creative."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Max output tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Upper limit per answer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reasoning"
+msgstr ""
+
+#: build/admin.js:1
+msgid "“Low” keeps editor generations fast and cheap; “Auto” lets the model think longer."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Low (fast)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto (model decides)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save engine settings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Usage could not be loaded."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Token counts come from the AI provider’s usage metadata. Check exact billing in Google AI Studio / Cloud Console."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Period"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 7 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 30 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Last 90 days"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Total tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Input tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Output tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Avg. response time"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Errors"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Requests per day chart"
+msgstr ""
+
+#. translators: 1: date, 2: requests, 3: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%1$s — %2$s requests, %3$s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No requests in this period yet."
+msgstr ""
+
+#: build/admin.js:1
+msgid "By task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Task"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Model"
+msgstr ""
+
+#: build/admin.js:1
+msgid "By user"
+msgstr ""
+
+#: build/admin.js:1
+msgid "User"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recent requests"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Where"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Time (s)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Status"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Newer"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Older"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Needs review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Approved"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Human-edited"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not translated"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Queued"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Running"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Paused"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cancelled"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Done"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Partial"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Failed"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Skipped"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pending"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Markup placeholder — keep it in your translation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add your Google Gemini API key under API Config to start translating."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Open API Config"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Multilingual plugin"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Detected automatically. Translations are stored through its own API."
+msgstr ""
+
+#: build/admin.js:1
+msgid "string dictionary"
+msgstr ""
+
+#: build/admin.js:1
+msgid "one post per language"
+msgstr ""
+
+#: build/admin.js:1
+msgid "In use"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not active"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Install and activate WPML, Polylang or TranslatePress, then add at least one extra language."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Languages"
+msgstr ""
+
+#. translators: %s: plugin
+#: build/admin.js:1
+#, js-format
+msgid "Configured in %s."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Source"
+msgstr ""
+
+#: build/admin.js:1
+msgid "formal"
+msgstr ""
+
+#: build/admin.js:1
+msgid "informal"
+msgstr ""
+
+#: build/admin.js:1
+msgid "auto tone"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit cultural settings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Translation memory"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Every translated segment is remembered. Unchanged segments are reused on every sync instead of being sent to the AI again."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Segments in memory"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Human-reviewed"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Need review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reused on the last syncs"
+msgstr ""
+
+#. translators: 1: reused, 2: total
+#: build/admin.js:1
+#, js-format
+msgid "%1$s of %2$s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Tokens used"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Glossary terms"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Recently translated"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Nothing translated yet. Start with Bulk Translate."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Queue"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Runs in the background with Action Scheduler."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Runs in the background with WP-Cron."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Bulk Translate"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No jobs yet."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto-sync"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Bulk"
+msgstr ""
+
+#. translators: %d: languages
+#: build/admin.js:1
+#, js-format
+msgid "Site title and tagline translated into %d languages."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Translate site title & tagline"
+msgstr ""
+
+#. translators: %d: job id
+#: build/admin.js:1
+#, js-format
+msgid "Job #%d — item log"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Close"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Item"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Language"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Segments"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reused / sent"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Message"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No target languages found. Add a second language in your multilingual plugin first."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Bulk translation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Translate whole post types into one or more languages. Items run in a background queue; segments already in the translation memory are reused."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not enabled for translation in your multilingual plugin."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Target languages"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Only items without a translation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Re-translate AI segments"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Ignores AI entries in the translation memory. Human-edited and approved segments are always kept."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Estimate cost"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Start translation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Items to process"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Reused from memory"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Estimated tokens"
+msgstr ""
+
+#. translators: %s: model id
+#: build/admin.js:1
+#, js-format
+msgid "Approx. cost (%s)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Estimates use public list prices and typical output length; your actual bill is shown in Google AI Studio."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Based on a sample of your content."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Jobs"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto-sync is on: editing a translated item queues a delta sync of the changed segments."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto-sync is off (Settings)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Refresh"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pause"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Resume"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cancel"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Remove"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Hide log"
+msgstr ""
+
+#: build/admin.js:1
+msgid "View log"
+msgstr ""
+
+#. translators: 1: finished, 2: total
+#: build/admin.js:1
+#, js-format
+msgid "%1$d of %2$d items"
+msgstr ""
+
+#. translators: %d: failed
+#: build/admin.js:1
+#, js-format
+msgid "%d failed"
+msgstr ""
+
+#. translators: %d: skipped
+#: build/admin.js:1
+#, js-format
+msgid "%d skipped"
+msgstr ""
+
+#. translators: 1: reused, 2: segments
+#: build/admin.js:1
+#, js-format
+msgid "%1$s of %2$s segments reused"
+msgstr ""
+
+#. translators: %s: tokens
+#: build/admin.js:1
+#, js-format
+msgid "%s tokens"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Compare source and translation segment by segment, fix wording and approve. Your edits are protected: later syncs never overwrite them."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Search translated items…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No translated items yet."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Translations"
+msgstr ""
+
+#: build/admin.js:1
+msgid "All translations"
+msgstr ""
+
+#: build/admin.js:1
+msgid "View source"
+msgstr ""
+
+#: build/admin.js:1
+msgid "View translation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Edit translation post"
+msgstr ""
+
+#. translators: 1: reused, 2: total, 3: percent
+#: build/admin.js:1
+#, js-format
+msgid "Last sync: %1$d of %2$d segments reused (%3$d%%)"
+msgstr ""
+
+#. translators: %d: segments sent
+#: build/admin.js:1
+#, js-format
+msgid "%d sent to AI"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Show"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:1
+#, js-format
+msgid "All segments (%d)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Not reviewed yet"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:1
+#, js-format
+msgid "Needs review (%d)"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:1
+#, js-format
+msgid "Human-edited (%d)"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:1
+#, js-format
+msgid "Approved (%d)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Approve all shown"
+msgstr ""
+
+#. translators: 1: reused, 2: total, 3: sent
+#: build/admin.js:1
+#, js-format
+msgid "Synced: %1$d of %2$d segments reused, %3$d sent to AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Sync now"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Approve"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Keep exactly these markup placeholders:"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Markup placeholders:"
+msgstr ""
+
+#. translators: %d: changes
+#: build/admin.js:1
+#, js-format
+msgid "%d unsaved changes"
+msgstr ""
+
+#: build/admin.js:1
+msgid "No unsaved changes"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Saved. The translation was updated from your reviewed segments."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save & update translation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add a term…"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Do not translate"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Case-sensitive"
+msgstr ""
+
+#: build/admin.js:1
+msgid "kept as is"
+msgstr ""
+
+#: build/admin.js:1
+msgid "AI decides"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Notes"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Add"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Delete term"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Glossary & brand constraints"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Protected terms are sent to the AI with every request and checked in every answer. If a translation breaks a rule, it is retried once with a correction; if it still breaks it, the segment is flagged for review."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Import CSV"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Export CSV"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Filter terms…"
+msgstr ""
+
+#. translators: %d: count
+#: build/admin.js:1
+#, js-format
+msgid "%d term"
+msgid_plural "%d terms"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: language
+#: build/admin.js:1
+#, js-format
+msgid "Forced (%s)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "“Do not translate” keeps the term exactly as written (brand names, product names, technical keywords). A forced translation always wins for that language — leave it empty to let the AI translate."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Import glossary CSV"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Header row: term, dnt, case_sensitive, notes, then one column per locale (e.g. de_DE). Existing terms are not removed."
+msgstr ""
+
+#. translators: %d: terms
+#: build/admin.js:1
+#, js-format
+msgid "%d terms imported."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Import"
+msgstr ""
+
+#: build/admin.js:1
+msgid "space"
+msgstr ""
+
+#: build/admin.js:1
+msgid "none"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Saved"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Tone"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Formality"
+msgstr ""
+
+#. translators: %s: pronoun
+#: build/admin.js:1
+#, js-format
+msgid "Formal (%s)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Formal"
+msgstr ""
+
+#. translators: %s: pronoun
+#: build/admin.js:1
+#, js-format
+msgid "Informal (%s)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Informal"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Follow the source tone"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Adapt idioms and cultural references"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Replace idioms, puns and local references with natural equivalents instead of translating them literally."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Units & formats"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Measurement units"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Converted values are pre-calculated and given to the AI."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Metric (cm, kg, °C)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Imperial / US (in, lb, °F)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Keep as in source"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Keep original measurement in parentheses"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Date format"
+msgstr ""
+
+#. translators: %s: example date
+#: build/admin.js:1
+#, js-format
+msgid "PHP format — example: %s"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Decimal separator"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Thousands separator"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Numbers look like"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Currency"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Currency mentions"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Keep amounts and currency"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Keep amounts, localize the format"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Convert with a fixed rate"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Target currency"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Rate (1 source unit =)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Prices in your content stay exactly as written. Choose “Convert” for a fixed exchange rate."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Brand voice"
+msgstr ""
+
+#: build/admin.js:1
+msgid "e.g. Friendly, confident, short sentences."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom instructions"
+msgstr ""
+
+#: build/admin.js:1
+msgid "e.g. Use “Warenkorb”, never “Einkaufswagen”."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Cultural adaptation per target language. These rules are added to every translation request for that language."
+msgstr ""
+
+#: build/admin.js:1
+msgid "No target languages configured in your multilingual plugin yet."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Translation workflow"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto-detect picks WPML, then Polylang, then TranslatePress."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto-detect"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Status of new translations"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Same as the source"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Draft (review before publishing)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Pending review"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Published"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Auto-sync on update"
+msgstr ""
+
+#: build/admin.js:1
+msgid "When a translated item is saved, only new or changed segments are queued for translation."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Protect manual edits"
+msgstr ""
+
+#: build/admin.js:1
+msgid "If someone edits a translation post directly, syncs skip it instead of overwriting."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Translate slugs"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Translate Yoast SEO / Rank Math fields"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Translate WooCommerce attributes & variations"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Copy other custom fields to new translations"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Use Action Scheduler when available"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Falls back to WP-Cron. Open admin screens also process the queue."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Custom fields to translate"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Comma-separated meta keys with text values (e.g. subtitle, _my_tagline)."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Default post types for bulk translation"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Delete all plugin data when uninstalling"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save settings"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Remove AI-only entries to force fresh translations on the next sync. Human-edited and approved entries are kept."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Delete all AI-only entries from the translation memory? Human-edited and approved entries are kept."
+msgstr ""
+
+#. translators: %d: entries
+#: build/admin.js:1
+#, js-format
+msgid "%d entries removed."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Clear AI entries"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Translation engine"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Segments are sent in batches with a structured response schema, so ids and markup placeholders come back reliably."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Model for translation"
+msgstr ""
+
+#. translators: %s: model
+#: build/admin.js:1
+#, js-format
+msgid "Pro model (%s) — best cultural nuance"
+msgstr ""
+
+#. translators: %s: model
+#: build/admin.js:1
+#, js-format
+msgid "Fast model (%s) — cheaper"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Model ID"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Thinking budget (tokens)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Room to reason about idioms and tone. 1024 is a good default."
+msgstr ""
+
+#: build/admin.js:1
+msgid "Request timeout (seconds)"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Segments per request"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Characters per request"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Save translation engine"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Dashboard"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Glossary"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Locales"
+msgstr ""
+
+#: build/admin.js:1
+msgid "API Config"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Usage Logs"
+msgstr ""
+
+#: build/admin.js:1
+msgid "DEV3 AI Translator & Cultural Localizer"
+msgstr ""
+
+#: build/admin.js:1
+msgid "Settings saved."
+msgstr ""
