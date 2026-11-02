@@ -3,7 +3,7 @@
  * Plugin Name:       DEV3 AI Translator & Cultural Localizer for WPML, TranslatePress & Polylang
  * Plugin URI:        https://dev3.tech/item/dev3-ai-translator-localizer
  * Description:       AI translation with cultural adaptation, glossary, translation memory and delta sync for WPML, TranslatePress and Polylang.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            DEV3 Technologies
@@ -18,7 +18,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'DEV3TL_VERSION', '1.0.0' );
+define( 'DEV3TL_VERSION', '1.0.1' );
 define( 'DEV3TL_FILE', __FILE__ );
 define( 'DEV3TL_PATH', plugin_dir_path( __FILE__ ) );
 define( 'DEV3TL_URL', plugin_dir_url( __FILE__ ) );

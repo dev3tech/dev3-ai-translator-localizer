@@ -4,7 +4,7 @@ Tags: translation, multilingual, polylang, wpml, translatepress
 Requires at least: 6.0
 Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,7 +32,7 @@ The translation engine is Google Gemini (default model gemini-2.5-pro, configura
 
 = Privacy =
 
-The text you translate (titles, content, excerpts, selected custom fields, SEO fields, term names) and your glossary and locale instructions are sent to the Google Gemini API using your own API key, only when a translation runs: manually, in a bulk job, or by auto-sync after you save a translated post. No visitor data is sent. The API key is encrypted in your database (AES-256-GCM) and never sent to the browser.tech. Usage logs (task, model, token counts) are stored in your database and can be turned off.
+The text you translate (titles, content, excerpts, selected custom fields, SEO fields, term names) and your glossary and locale instructions are sent to the Google Gemini API using your own API key, only when a translation runs: manually, in a bulk job, or by auto-sync after you save a translated post. No visitor data is sent. The API key is encrypted in your database (AES-256-GCM) and never sent to the browser. Usage logs (task, model, token counts) are stored in your database and can be turned off.
 
 == Installation ==
 
@@ -58,6 +58,9 @@ Bulk Translate shows an estimate (segments, tokens, approximate cost) before you
 Users with `edit_posts` can translate and review posts they can edit; users with `manage_options` manage settings, glossary and bulk jobs. Both can be changed with the `dev3tl_capability` and `dev3tl_manage_capability` filters.
 
 == Changelog ==
+
+= 1.0.1 =
+* Fixed a typo in the privacy text.
 
 = 1.0.0 =
 * Initial release.

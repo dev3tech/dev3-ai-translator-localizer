@@ -21,7 +21,7 @@ Integrations:
 * **TranslatePress** – rendered strings are written into TranslatePress' dictionary using its own parser and query classes; paragraphs with links become translation blocks.
 
 ### Privacy
-The text you translate (titles, content, excerpts, selected custom fields, SEO fields, term names) and your glossary and locale instructions are sent to the Google AI API using your own API key, only when a translation runs: manually, in a bulk job, or by auto-sync after you save a translated post. No visitor data is sent. The API key is encrypted in your database (AES-256-GCM) and never sent to the browser.tech. Usage logs (task, model, token counts) are stored in your database and can be turned off.
+The text you translate (titles, content, excerpts, selected custom fields, SEO fields, term names) and your glossary and locale instructions are sent to the Google AI API using your own API key, only when a translation runs: manually, in a bulk job, or by auto-sync after you save a translated post. No visitor data is sent. The API key is encrypted in your database (AES-256-GCM) and never sent to the browser. Usage logs (task, model, token counts) are stored in your database and can be turned off.
 
 ## Requirements
 
@@ -75,6 +75,9 @@ Users with `edit_posts` can translate and review posts they can edit; users with
 The full HTML guide (installation, settings, hooks and FAQ) is in [`docs/index.html`](docs/index.html). Open it in a browser after cloning or downloading the repository.
 
 ## Changelog
+
+### 1.0.1
+* Fixed a typo in the privacy text.
 
 ### 1.0.0
 * Initial release.
